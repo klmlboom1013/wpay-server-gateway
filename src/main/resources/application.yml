@@ -1,0 +1,19 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+
+spring:
+  application:
+    name: wpay-core-gateway
+  profiles:
+    active: local
+
+logging:
+  # log4j2 설정 .yml 파일 경로 설정
+  config: classpath:log4j2.yml
